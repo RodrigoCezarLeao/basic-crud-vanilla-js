@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS basic vanilla crud</title>
+</head>
+<body>
+    <h1>JS basic vanilla crud</h1>
+
+    <hr/>
+    
+    <header>
+        <label for="iPerson">Person</label>
+        <input type="text" id="iPerson"/>
+        <button onclick="addPerson()" >Add person</button>
+
+        <div id="list-people" style="height: 150px; 
+        overflow: scroll; 
+        width: 150px; 
+        margin: 10px;
+        border: 1px solid black"></div>
+
+    </header>
+
+
+
+
+    <script src="config.js" defer="defer"></script>
+    <script src="peopleFetchPromise.js" defer="defer"></script>
+
+</body>
+</html>

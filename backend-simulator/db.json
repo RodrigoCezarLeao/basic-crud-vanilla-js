@@ -1,0 +1,85 @@
+{
+  "TaskStatus": [
+    {
+      "id": 1,
+      "name": "Done"
+    },
+    {
+      "id": 2,
+      "name": "Canceled"
+    },
+    {
+      "id": 3,
+      "name": "Delayed"
+    },
+    {
+      "id": 4,
+      "name": "Scheduled"
+    }
+  ],
+  "People": [
+    {
+      "id": "rod",
+      "name": "Rodrigo"
+    },
+    {
+      "id": "tia",
+      "name": "Tiago"
+    },
+    {
+      "id": "fer",
+      "name": "Fernanda"
+    },
+    {
+      "id": "ana",
+      "name": "Ana Luísa"
+    },
+    {
+      "id": "pam",
+      "name": "Pammela"
+    },
+    {
+      "id": "mar",
+      "name": "Marcelle"
+    },
+    {
+      "id": "sam",
+      "name": "Samily"
+    },
+    {
+      "id": "bab",
+      "name": "Babi"
+    },
+    {
+      "id": "sab",
+      "name": "Sabrina"
+    }
+  ],
+  "Tasks": [
+    {
+      "people_id": "rod",
+      "description": "English class with teacher Bruno",
+      "status_id": 4
+    },
+    {
+      "people_id": "pam",
+      "description": "Prepare small group's study",
+      "status_id": 1
+    },
+    {
+      "people_id": "ana",
+      "description": "Finish the living room project",
+      "status_id": 3
+    },
+    {
+      "people_id": "fer",
+      "description": "Separate all documents to take to the building",
+      "status_id": 2
+    },
+    {
+      "people_id": "cel",
+      "description": "Finish keychain production",
+      "status_id": 1
+    }
+  ]
+}
