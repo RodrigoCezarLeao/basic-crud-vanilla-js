@@ -5,30 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS basic vanilla crud</title>
+
+    <style>
+        label, textarea {
+            margin: 10px;
+        }
+
+        #list-people-insertion span:hover, #tasks-list span:hover, #clear-filter-tasks:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>JS basic vanilla crud</h1>
 
     <hr/>
     
-    <header>
-        <label for="iPerson">Person</label>
-        <input type="text" id="iPerson"/>
-        <button onclick="addPerson()" >Add person</button>
+    <header style="display: flex; width: 100%; justify-content: space-around;">
+        <div id="people-commands">
 
-        <div id="list-people" style="height: 150px; 
-        overflow: scroll; 
-        width: 150px; 
-        margin: 10px;
-        border: 1px solid black"></div>
+            <label for="iPerson">Person</label>
+            <input type="text" id="iPerson"/>
+            <button onclick="addPersonPromise()" >Add person</button>
+            
+            <div id="list-people-insertion" style="height: 150px;
+            padding: 10px; 
+            overflow: auto;
+            margin: 10px;
+            border: 1px solid black"></div>
+        </div>
+
+        <div id="tasks-commands" style="position: relative;">
+            <div>
+                <label for="sPerson">Person</label>
+                <select id="sPerson"></select>
+
+                <label for="sTaskStatus">Task Status</label>
+                <select id="sTaskStatus"></select>
+            </div>
+
+            <br />
+            
+            <div style="display: flex; align-items: center;">
+                <label for="iDescription">Description</label>
+                <textarea id="iDescription" style="resize: none" rows="8" cols="25"></textarea>
+            </div>
+
+            <button id="add-btn" style="width: 100px; position: absolute; right: 0px" onclick="addTask()">Add Task</button>
+            <button id="clear-btn" style="width: 100px; position: absolute; right: 110px" onclick="resetForm()">Clear Form</button>
+
+        </div>
 
     </header>
 
+    <hr />
 
+    <label for="filter-tasks">Filter:</label>
+    <select id="filter-tasks" onchange="renderFilterPersonTasks()"></select>
+
+    <span style="cursor: pointer; margin-left: 10px;" id="clear-filter-tasks">X</span>
+
+    <section id="tasks-list" style="display: flex; margin: 15px; flex-wrap: wrap;"></section>
 
 
     <script src="config.js" defer="defer"></script>
+    <script src="helpers.js" defer="defer"></script>
+    <script src="dom-references.js" defer="defer"></script>
     <script src="peopleFetchPromise.js" defer="defer"></script>
-
+    <script src="taskStatusFetchPromise.js" defer="defer"></script>
+    <script src="tasksFetchPromise.js" defer="defer"></script>    
+    
 </body>
 </html>
